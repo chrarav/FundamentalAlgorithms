@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 /**
  * @author: chrarav
- * @date: 7 April 2023
- * @description: simple encryption by shifting a letter by three places. Used by Caesar
- * @restrictions: Assume only lower case letters. Accept blank, ., !, ?
+ * @date: 8 April 2023
+ * @description: Upgrade of shiftCipher
+ * @key: Permute the letters by some shift
+ * @Start: 10:27
+ * @approximateTime:
  *
  */
 
@@ -57,7 +59,6 @@ public class ShiftCipher {
     }
 
 
-
     public static String promptInput(){
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Please enter a String: ");
@@ -103,7 +104,6 @@ public class ShiftCipher {
             int n=findCharForDecryption(c);
             str = str.substring(0,i)+arr[n][0]+str.substring(i+1);
         }
-
         return str;
     }
 
@@ -120,6 +120,4 @@ public class ShiftCipher {
         String decryptedMessage = decryptMessage(encryptedMessage);
         System.out.println("Decrypted message: "+decryptedMessage);
     }
-
-
 }
